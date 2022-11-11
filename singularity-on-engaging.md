@@ -1,4 +1,4 @@
-### Potential recipe for using Singularity for running the very latest Openstudio on a cluster that may not have all the latest GCC versions in place.
+### Potential recipe for using Singularity to run the very latest Openstudio on a cluster that may not have all the latest GCC versions in place.
 
 On a machine with Docker (e.g. your laptop)
 
