@@ -19,7 +19,7 @@ On a machine with Docker (e.g. your laptop)
     ```
     
     
-On cluster with Singularity
+On cluster with Singularity, for example, https://engaging-ood.mit.edu (singularity available by default) or https://txe1-portal.mit.edu/ (singularity conditionally available via approved request). 
 
 * build singularity image
 
