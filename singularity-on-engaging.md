@@ -16,12 +16,26 @@ On a machine with Docker (e.g. your laptop)
 
     ```
     $ scp openstudio-docker.tar cnh@eofe8.mit.edu:/nfs/cnhlab001/cnh/projects/openstudio/
-    $ ssh -l cnh eofe8.mit.edu
-    $ cd /nfs/cnhlab001/cnh/projects/openstudio/
-    $ module load singularity
-    $ singularity build --sandbox openstudio.sdir  docker-archive://openstudio-docker.tar
-    $ singularity shell openstudio.sdir
+    ```
+    
+    
+On cluster with Singularity
+
+* build singularity image
+
+    ```
+    ssh -l cnh eofe8.mit.edu
+    cd /nfs/cnhlab001/cnh/projects/openstudio/
+    module load singularity
+    singularity build --sandbox openstudio.sdir  docker-archive://openstudio-docker.tar
+    singularity shell openstudio.sdir
     Singularity> dpkg-deb -xv /OpenStudio-3.5.0+7b14ce1588-Ubuntu-20.04.deb /tmp/
+    ```
+  
+* run openstudio in Singularity session
+
+    ```
+    $ singularity shell openstudio.sdir
     Singularity> /usr/local/openstudio-3.5.0/bin/openstudio 
     Usage: openstudio [options] <command> [<args>]
 
